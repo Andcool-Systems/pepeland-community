@@ -1,0 +1,86 @@
+.main {
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(0deg, rgba(16, 35, 49, 1) 0%, #18181b 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated {
+    animation: main_anim .8s cubic-bezier(.4, 0, .2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.main h1,
+.main p {
+    margin: 0;
+}
+
+.main h1 {
+    font-size: 3.5rem;
+}
+
+.main p {
+    font-size: 1rem;
+    color: rgb(189, 189, 199);
+}
+
+.button {
+    background-color: #767283;
+    color: white;
+    padding: .8rem 1.2rem .8rem 1.2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: .5rem;
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    transition: background-color 250ms;
+}
+
+.button:hover {
+    background-color: #908ba1;
+}
+
+@keyframes main_anim {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(100px) scale(.9);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 550px) {
+    .main h1 {
+        font-size: 3rem;
+    }
+
+    .main p {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .main h1 {
+        font-size: 2.5rem;
+    }
+
+    .main p {
+        font-size: .8rem;
+    }
+}
