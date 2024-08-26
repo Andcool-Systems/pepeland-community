@@ -37,6 +37,11 @@
     align-items: center;
     flex-direction: row;
     gap: .5rem;
+    transition: gap 200ms;
+}
+
+.title_side_2:hover {
+    gap: .8rem;
 }
 
 .title_side h1 {

@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 export const metadata: Metadata = {
     title: "Pepeland Community",
     description: "Проекты, разрабатываемые сообществом Pepeland",
+    manifest: '/static/manifest.webmanifest',
     icons: {
         icon: '/favicon.ico',
         apple: '/favicon.ico',

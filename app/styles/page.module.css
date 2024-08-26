@@ -1,8 +1,6 @@
 .main {
     width: 100vw;
     height: 80vh;
-    position: absolute;
-    top: 0;
     background: linear-gradient(0deg, rgba(16, 35, 49, 1) 0%, #18181b 60%);
     display: flex;
     align-items: center;
@@ -82,5 +80,11 @@
 
     .main p {
         font-size: .8rem;
+    }
+}
+
+@media (max-width: 290px) {
+    .main h1 {
+        font-size: 2rem;
     }
 }

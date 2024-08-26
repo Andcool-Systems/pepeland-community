@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.button {
+    background-color: #767283;
+    color: white;
+    padding: .8rem 1rem .8rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: .5rem;
+    text-decoration: none;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    transition: background-color 250ms;
+}
+
+.button:hover {
+    background-color: #908ba1;
+}

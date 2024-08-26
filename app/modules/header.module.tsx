@@ -37,15 +37,15 @@ const Header = () => {
                 <div className={styles.menu}>
                     <div className={styles.title_side}>
                         <NextImage className={styles.exit_menu} src='/static/icons/plus.svg' alt='' width={32} height={32} onClick={() => setExpanded(false)} />
-                        <div className={styles.title_side_2}>
+                        <NextLink href='/' className={styles.title_side_2}>
                             <h1>Pepeland Community</h1>
                             <NextImage src='/static/icons/icon.svg' alt='' width={25} height={25} />
-                        </div>
+                        </NextLink>
                     </div>
                     <div className={styles.pages}>
-                        <NextLink href=''>Проекты <NextImage src='/static/icons/stack.svg' alt='' width={25} height={25} /></NextLink>
-                        <NextLink href=''>Правила <NextImage src='/static/icons/book.svg' alt='' width={25} height={25} /></NextLink>
-                        <NextLink href=''>Репорты <NextImage src='/static/icons/flag.svg' alt='' width={25} height={25} /></NextLink>
+                        <NextLink href='/projects'>Проекты <NextImage src='/static/icons/stack.svg' alt='' width={25} height={25} /></NextLink>
+                        <NextLink href='/rules'>Правила <NextImage src='/static/icons/book.svg' alt='' width={25} height={25} /></NextLink>
+                        <NextLink href='/reports'>Репорты <NextImage src='/static/icons/flag.svg' alt='' width={25} height={25} /></NextLink>
                     </div>
                 </div>
             </CSSTransition>
@@ -56,9 +56,9 @@ const Header = () => {
                         <h1>Pepeland Community</h1>
                     </div>
                     <div className={styles.links}>
-                        <NextLink href=''>Проекты</NextLink>
-                        <NextLink href=''>Правила</NextLink>
-                        <NextLink href=''>Репорты</NextLink>
+                        <NextLink href='/projects'>Проекты</NextLink>
+                        <NextLink href='/rules'>Правила</NextLink>
+                        <NextLink href='/reports'>Репорты</NextLink>
                     </div>
                     <NextImage src='/static/icons/burger-menu.svg'
                         alt=''
