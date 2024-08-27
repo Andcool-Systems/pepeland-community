@@ -176,6 +176,10 @@
     gap: .8rem;
 }
 
+.active {
+    color: #18c0b8 !important;
+}
+
 
 @media (max-width: 885px) {
     .links {

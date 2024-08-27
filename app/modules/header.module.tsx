@@ -4,10 +4,17 @@ import NextImage from 'next/image';
 import NextLink from 'next/link';
 import styles from '@/app/styles/header.module.css';
 import { CSSTransition } from 'react-transition-group';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePathname } from "next/navigation";
 
 const Header = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
+    const pathname = usePathname();
+    const path = pathname.split('/')[pathname.split('/').length - 1];
+
+    useEffect(() => {
+        setExpanded(false);
+    }, [pathname]);
 
     return (
         <>
@@ -56,9 +63,9 @@ const Header = () => {
                         <h1>Pepeland Community</h1>
                     </div>
                     <div className={styles.links}>
-                        <NextLink href='/projects'>Проекты</NextLink>
-                        <NextLink href='/rules'>Правила</NextLink>
-                        <NextLink href='/reports'>Репорты</NextLink>
+                        <NextLink href='/projects' className={`${path == 'projects' && styles.active}`}>Проекты</NextLink>
+                        <NextLink href='/rules' className={`${path == 'rules' && styles.active}`}>Правила</NextLink>
+                        <NextLink href='/reports' className={`${path == 'reports' && styles.active}`}>Репорты</NextLink>
                     </div>
                     <NextImage src='/static/icons/burger-menu.svg'
                         alt=''

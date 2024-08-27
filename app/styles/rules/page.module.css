@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    line-height: 1.5rem;
+    animation: show .5s;
+}
+
+.discord_link {
+    padding: 2px 3px 2px 3px;
+    background-color: #2b2b4c;
+    border-radius: 3px;
+    transition: background-color 150ms;
+}
+
+.discord_link:hover {
+    background-color: #5865f2;
+    text-decoration: underline;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -2,6 +2,7 @@ import style from '@/app/styles/page.module.css';
 import { Manrope } from "next/font/google";
 import NextLink from 'next/link';
 import NextImage from 'next/image';
+
 const manrope = Manrope({ subsets: ["latin", "cyrillic"] });
 
 export default function Home() {

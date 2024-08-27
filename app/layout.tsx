@@ -25,7 +25,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang="ru" className={inter.className}>
             <body>
                 <Header />
-                {children}
+                <div id="animated_root">
+                    {children}
+                </div>
             </body>
         </html>
     );
