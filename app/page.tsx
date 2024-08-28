@@ -12,7 +12,7 @@ export default function Home() {
                 <div className={style.animated}>
                     <h1 className={manrope.className} style={{ textWrap: 'nowrap' }}>Общий Домен</h1>
                     <p>Для сайтов, связанных с Пепелендом</p>
-                    <NextLink href='/rules' className={style.button}><NextImage src='/static/icons/book.svg' alt='' width={20} height={20} /> Правила</NextLink>
+                    <NextLink href='/projects' className={style.button}><NextImage src='/static/icons/stack.svg' alt='' width={22} height={22} /> Проекты</NextLink>
                 </div>
             </div>
         </main>

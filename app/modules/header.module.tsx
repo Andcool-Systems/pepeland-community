@@ -52,8 +52,9 @@ const Header = () => {
                     <div className={styles.pages}>
                         <NextLink href='/projects'>Проекты <NextImage src='/static/icons/stack.svg' alt='' width={25} height={25} /></NextLink>
                         <NextLink href='/rules'>Правила <NextImage src='/static/icons/book.svg' alt='' width={25} height={25} /></NextLink>
-                        <NextLink href='/reports'>Репорты <NextImage src='/static/icons/flag.svg' alt='' width={25} height={25} /></NextLink>
+                        <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform'>Репорты <NextImage src='/static/icons/flag.svg' alt='' width={25} height={25} /></NextLink>
                     </div>
+                    <p style={{ position: 'absolute', bottom: 0 }}>by Guevin1 x AndcoolSystems</p>
                 </div>
             </CSSTransition>
             <header className={styles.header}>
@@ -65,7 +66,7 @@ const Header = () => {
                     <div className={styles.links}>
                         <NextLink href='/projects' className={`${path == 'projects' && styles.active}`}>Проекты</NextLink>
                         <NextLink href='/rules' className={`${path == 'rules' && styles.active}`}>Правила</NextLink>
-                        <NextLink href='/reports' className={`${path == 'reports' && styles.active}`}>Репорты</NextLink>
+                        <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform' className={`${path == 'reports' && styles.active}`}>Репорты</NextLink>
                     </div>
                     <NextImage src='/static/icons/burger-menu.svg'
                         alt=''

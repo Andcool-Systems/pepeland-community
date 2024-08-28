@@ -13,15 +13,11 @@
     animation: show .5s;
 }
 
-.discord_link {
-    padding: 2px 3px 2px 3px;
-    background-color: #2b2b4c;
-    border-radius: 3px;
-    transition: background-color 150ms;
+.telegram_link {
+    color: #37e1ca;
 }
 
-.discord_link:hover {
-    background-color: #5865f2;
+.telegram_link:hover {
     text-decoration: underline;
 }
 
