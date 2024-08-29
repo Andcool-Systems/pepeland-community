@@ -36,7 +36,7 @@ const Projects = () => {
                             <div className={style.header}>
                                 {!!element.banner &&
                                     <div className={style.banner_container}>
-                                        <img className={style.banner} src={element.banner} alt='' />
+                                        <NextImage className={style.banner} src={element.banner} alt='' fill={true} style={{ objectFit: "cover" }} />
                                     </div>
                                 }
                                 <NextLink href={`https://${element.subdomain}.${window.location.host}`}>
