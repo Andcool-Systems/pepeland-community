@@ -10,6 +10,7 @@
     "prod": "next build && next start"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.14.0",
     "axios": "^1.7.5",
     "next": "14.2.6",
     "react": "^18",

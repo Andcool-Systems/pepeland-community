@@ -6,6 +6,7 @@ import styles from '@/app/styles/header.module.css';
 import { CSSTransition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
+import { IconBook, IconStack, IconX, IconMenu2, IconFlagFilled } from '@tabler/icons-react';
 
 const Header = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -43,16 +44,16 @@ const Header = () => {
                 unmountOnExit>
                 <div className={styles.menu}>
                     <div className={styles.title_side}>
-                        <NextImage className={styles.exit_menu} src='/static/icons/plus.svg' alt='' width={32} height={32} onClick={() => setExpanded(false)} />
+                        <IconX className={styles.exit_menu} width={32} height={32} onClick={() => setExpanded(false)} />
                         <NextLink href='/' className={styles.title_side_2}>
                             <h1>Pepeland Community</h1>
                             <NextImage src='/static/icons/icon.svg' alt='' width={25} height={25} />
                         </NextLink>
                     </div>
                     <div className={styles.pages}>
-                        <NextLink href='/projects'>Проекты <NextImage src='/static/icons/stack.svg' alt='' width={25} height={25} /></NextLink>
-                        <NextLink href='/rules'>Правила <NextImage src='/static/icons/book.svg' alt='' width={25} height={25} /></NextLink>
-                        <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform'>Репорты <NextImage src='/static/icons/flag.svg' alt='' width={25} height={25} /></NextLink>
+                        <NextLink href='/projects'>Проекты <IconStack width={25} height={25} /></NextLink>
+                        <NextLink href='/rules'>Правила <IconBook width={25} height={25} /></NextLink>
+                        <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform'>Репорты <IconFlagFilled width={25} height={25} /></NextLink>
                     </div>
                     <p style={{ position: 'absolute', bottom: 0 }}>by Guevin1 x AndcoolSystems</p>
                 </div>
@@ -68,8 +69,7 @@ const Header = () => {
                         <NextLink href='/rules' className={`${path == 'rules' && styles.active}`}>Правила</NextLink>
                         <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform' className={`${path == 'reports' && styles.active}`}>Репорты</NextLink>
                     </div>
-                    <NextImage src='/static/icons/burger-menu.svg'
-                        alt=''
+                    <IconMenu2
                         className={styles.burger}
                         width={30}
                         height={30}
