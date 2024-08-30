@@ -16,13 +16,9 @@ interface Project {
     created_at: Date,
     updated_at: Date,
     icon: string | null,
-    creator: {
-        id: number,
-        name: string
-        created_at: Date,
-        updated_at: Date,
-    }
+    creator: string
 }
+
 const Projects = () => {
     const [elements, setElements] = useState<JSX.Element[]>([]);
 
@@ -56,7 +52,7 @@ const Projects = () => {
                                     <div className={style.icon_placeholder} />
                                     <div className={style.title}>
                                         <NextLink href={`https://${element.subdomain}.${window.location.host}`}>{element.name}</NextLink>
-                                        <p>by {element.creator.name}</p>
+                                        <p>by {element.creator}</p>
                                     </div>
                                 </div>
                                 <p>{element.description}</p>
