@@ -1,30 +1,45 @@
 {
-  "name": "pepeland_community",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prod": "next build && next start"
-  },
-  "dependencies": {
-    "@tabler/icons-react": "^3.14.0",
-    "axios": "^1.7.5",
-    "next": "14.2.6",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-transition-group": "^4.4.5",
-    "sharp": "^0.33.5"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/react-transition-group": "^4.4.11",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.6",
-    "typescript": "^5"
-  }
+    "name": "pepeland_community",
+    "version": "0.1.1",
+    "author": {
+        "name": "AndcoolSystems"
+    },
+    "description": "Проекты, разрабатываемые сообществом Pepeland",
+    "displayName": "Pepeland Community",
+    "homepage": "https://pepeland.space",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Guevin1"
+        },
+        {
+            "name": "Mr Angames"
+        }
+    ],
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prod": "next build && next start"
+    },
+    "dependencies": {
+        "@tabler/icons-react": "^3.14.0",
+        "axios": "^1.7.5",
+        "next": "14.2.6",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-transition-group": "^4.4.5",
+        "sharp": "^0.33.5"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "@types/react-transition-group": "^4.4.11",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.6",
+        "typescript": "^5"
+    }
 }
