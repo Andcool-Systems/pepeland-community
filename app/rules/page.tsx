@@ -1,6 +1,24 @@
 import React from "react";
 import style from '@/app/styles/rules/page.module.css';
 import NextLink from 'next/link';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Pepeland Community · Правила",
+    description: "Правила размещения проектов на сайте.",
+    manifest: '/static/manifest.webmanifest',
+    icons: {
+        icon: '/favicon.ico',
+        apple: '/favicon.ico',
+        shortcut: '/favicon.ico'
+    },
+    openGraph: {
+        title: "Pepeland Community · Правила",
+        description: "Правила размещения проектов на сайте.",
+        siteName: 'Pepeland Community',
+        url: 'https://pepeland.space/projects'
+    }
+}
 
 const Rules = () => {
     return (
