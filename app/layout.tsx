@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Pepeland Community",
         description: "Проекты, разрабатываемые сообществом Pepeland"
+    },
+    other: {
+        'theme-color': '#102331'
     }
 };
 
@@ -25,9 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <html lang="ru" className={inter.className}>
             <body>
                 <Header />
-                <div id="animated_root">
-                    {children}
-                </div>
+                {children}
             </body>
         </html>
     );
