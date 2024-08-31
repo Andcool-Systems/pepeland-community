@@ -1,12 +1,12 @@
 "use client";
 
-import NextImage from 'next/image';
 import NextLink from 'next/link';
 import styles from '@/app/styles/header.module.css';
 import { CSSTransition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
 import { IconBook, IconStack, IconX, IconMenu2, IconFlagFilled } from '@tabler/icons-react';
+import IconSvg from '@/app/icon.svg';
 
 const Header = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -47,7 +47,7 @@ const Header = () => {
                         <IconX className={styles.exit_menu} width={32} height={32} onClick={() => setExpanded(false)} />
                         <NextLink href='/' className={styles.title_side_2}>
                             <h1>Pepeland Community</h1>
-                            <NextImage src='/static/icons/icon.svg' alt='' width={25} height={25} />
+                            <IconSvg width={25} height={25} />
                         </NextLink>
                     </div>
                     <div className={styles.pages}>
@@ -61,7 +61,7 @@ const Header = () => {
             <header className={styles.header}>
                 <div className={styles.child}>
                     <div className={styles.title}>
-                        <NextLink href='/'><NextImage src='/static/icons/icon.svg' alt='' width={55} height={55} className={styles.main_icon} /></NextLink>
+                        <NextLink href='/'><IconSvg width={55} height={55} className={styles.main_icon} /></NextLink>
                         <h1>Pepeland Community</h1>
                     </div>
                     <div className={styles.links}>

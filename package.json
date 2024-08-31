@@ -25,6 +25,7 @@
         "prod": "next build && next start"
     },
     "dependencies": {
+        "@svgr/webpack": "^8.1.0",
         "@tabler/icons-react": "^3.14.0",
         "axios": "^1.7.5",
         "next": "14.2.6",

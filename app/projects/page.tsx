@@ -6,6 +6,7 @@ import AdaptiveGrid from "../modules/adaptive_grid.module";
 import style from '@/app/styles/projects/page.module.css';
 import NextLink from 'next/link';
 import NextImage from 'next/image';
+import IconSvg from '@/app/icon.svg';
 
 interface Project {
     id: number,
@@ -36,15 +37,22 @@ const Projects = () => {
                                     </div>
                                 }
                                 <NextLink href={`https://${element.subdomain}.${window.location.host}`}>
-                                    <NextImage
-                                        src={element.icon ?? '/static/icons/icon.svg'}
-                                        alt=''
-                                        className={style.icon}
-                                        draggable={false}
-                                        width={96}
-                                        height={96}
-                                        priority={true}
-                                    />
+                                    {element.icon ?
+                                        <NextImage
+                                            src={element.icon}
+                                            alt=''
+                                            className={style.icon}
+                                            draggable={false}
+                                            width={96}
+                                            height={96}
+                                            priority={true}
+                                        /> :
+                                        <IconSvg
+                                            width={96}
+                                            height={96}
+                                            className={style.icon}
+                                        />
+                                    }
                                 </NextLink>
                             </div>
                             <div className={style.body}>
