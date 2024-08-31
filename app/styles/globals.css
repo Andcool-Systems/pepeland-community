@@ -3,6 +3,7 @@ body {
     margin: 0;
     color: white;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 h1,
