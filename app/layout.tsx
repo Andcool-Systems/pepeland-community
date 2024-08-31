@@ -19,7 +19,8 @@ export const metadata: Metadata = {
         description: "Проекты, разрабатываемые сообществом Pepeland"
     },
     other: {
-        'theme-color': '#102331'
+        'theme-color': '#102331',
+        'darkreader-lock': 'darkreader-lock'
     }
 };
 
