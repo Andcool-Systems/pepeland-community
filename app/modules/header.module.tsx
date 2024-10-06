@@ -1,12 +1,12 @@
 "use client";
 
-import NextLink from 'next/link';
 import styles from '@/app/styles/header.module.css';
 import { CSSTransition } from 'react-transition-group';
 import { useEffect, useState } from 'react';
 import { usePathname } from "next/navigation";
 import { IconBook, IconStack, IconX, IconMenu2, IconFlagFilled } from '@tabler/icons-react';
 import IconSvg from '@/app/icon.svg';
+import InvisibleLink from './invisible_link.module';
 
 const Header = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -45,15 +45,15 @@ const Header = () => {
                 <div className={styles.menu}>
                     <div className={styles.title_side}>
                         <IconX className={styles.exit_menu} width={32} height={32} onClick={() => setExpanded(false)} />
-                        <NextLink href='/' className={styles.title_side_2}>
+                        <InvisibleLink href='/' className={styles.title_side_2}>
                             <h1>Pepeland Community</h1>
                             <IconSvg width={25} height={25} />
-                        </NextLink>
+                        </InvisibleLink>
                     </div>
                     <div className={styles.pages}>
-                        <NextLink href='/projects'>Проекты <IconStack width={25} height={25} /></NextLink>
-                        <NextLink href='/rules'>Правила <IconBook width={25} height={25} /></NextLink>
-                        <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform'>Репорты <IconFlagFilled width={25} height={25} /></NextLink>
+                        <InvisibleLink href='/projects'>Проекты <IconStack width={25} height={25} /></InvisibleLink>
+                        <InvisibleLink href='/rules'>Правила <IconBook width={25} height={25} /></InvisibleLink>
+                        <InvisibleLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform'>Репорты <IconFlagFilled width={25} height={25} /></InvisibleLink>
                     </div>
                     <p style={{ position: 'absolute', bottom: 0 }}>by Guevin1 x AndcoolSystems</p>
                 </div>
@@ -61,13 +61,13 @@ const Header = () => {
             <header className={styles.header}>
                 <div className={styles.child}>
                     <div className={styles.title}>
-                        <NextLink href='/'><IconSvg width={55} height={55} className={styles.main_icon} /></NextLink>
+                        <InvisibleLink href='/'><IconSvg width={55} height={55} className={styles.main_icon} /></InvisibleLink>
                         <h1>Pepeland Community</h1>
                     </div>
                     <div className={styles.links}>
-                        <NextLink href='/projects' className={`${path == 'projects' && styles.active}`}>Проекты</NextLink>
-                        <NextLink href='/rules' className={`${path == 'rules' && styles.active}`}>Правила</NextLink>
-                        <NextLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform' className={`${path == 'reports' && styles.active}`}>Репорты</NextLink>
+                        <InvisibleLink href='/projects' className={`${path == 'projects' && styles.active}`}>Проекты</InvisibleLink>
+                        <InvisibleLink href='/rules' className={`${path == 'rules' && styles.active}`}>Правила</InvisibleLink>
+                        <InvisibleLink href='https://docs.google.com/forms/d/e/1FAIpQLScMCFH470CzS0eml2EPTThp_uDBGlDDiR5lUDAYOufaL_HC9Q/viewform' className={`${path == 'reports' && styles.active}`}>Репорты</InvisibleLink>
                     </div>
                     <IconMenu2
                         className={styles.burger}
