@@ -1,7 +1,7 @@
 import React from "react";
 import style from '@/app/styles/rules/page.module.css';
+import NextLink from 'next/link';
 import type { Metadata } from "next";
-import InvisibleLink from "../modules/invisible_link.module";
 
 export const metadata: Metadata = {
     title: "Pepeland Community · Правила",
@@ -44,9 +44,9 @@ const Rules = () => {
 
 const DiscordUser = ({ username, link }: { username: string, link: string }) => {
     return (
-        <InvisibleLink href={link} className={style.telegram_link}>
+        <NextLink href={link} className={style.telegram_link}>
             @{username}
-        </InvisibleLink>
+        </NextLink>
     )
 }
 

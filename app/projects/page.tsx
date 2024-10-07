@@ -4,9 +4,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import AdaptiveGrid from "../modules/adaptive_grid.module";
 import style from '@/app/styles/projects/page.module.css';
+import NextLink from 'next/link';
 import NextImage from 'next/image';
 import IconSvg from '@/app/icon.svg';
-import InvisibleLink from "../modules/invisible_link.module";
 
 interface Project {
     id: number,
@@ -36,7 +36,7 @@ const Projects = () => {
                                         <NextImage className={style.banner} src={element.banner} alt='' fill={true} style={{ objectFit: "cover" }} />
                                     </div>
                                 }
-                                <InvisibleLink href={`https://${element.subdomain}.${window.location.host}`}>
+                                <NextLink href={`https://${element.subdomain}.${window.location.host}`}>
                                     {element.icon ?
                                         <NextImage
                                             src={element.icon}
@@ -53,13 +53,13 @@ const Projects = () => {
                                             className={style.icon}
                                         />
                                     }
-                                </InvisibleLink>
+                                </NextLink>
                             </div>
                             <div className={style.body}>
                                 <div className={style.body_top}>
                                     <div className={style.icon_placeholder} />
                                     <div className={style.title}>
-                                        <InvisibleLink href={`https://${element.subdomain}.${window.location.host}`}>{element.name}</InvisibleLink>
+                                        <NextLink href={`https://${element.subdomain}.${window.location.host}`}>{element.name}</NextLink>
                                         <p>by {element.creator}</p>
                                     </div>
                                 </div>
