@@ -81,7 +81,7 @@
     background-color: #27272c;
     position: fixed;
     right: 0;
-    height: 100vh;
+    height: 100%;
     width: 40vw;
     transform-origin: right;
     z-index: 100;
@@ -90,58 +90,36 @@
     box-sizing: border-box;
     flex-direction: column;
     gap: 1rem;
+    transition: right 200ms ease-out;
 }
 
 .exit_menu {
     cursor: pointer;
 }
 
-
 .menu-enter {
     right: -40vw;
 }
 
-.menu-enter-active {
-    right: 0;
-    transition: right 200ms ease-out;
-}
-
-.menu-exit {
-    right: 0;
-}
-
 .menu-exit-active {
     right: -40vw;
-    transition: right 200ms ease-out;
 }
 
 .blur {
     backdrop-filter: blur(3px);
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 100;
     display: none;
+    transition: backdrop-filter 250ms ease-out;
 }
 
 .blur_enter {
     backdrop-filter: blur(0px);
 }
 
-.blur_enter_active {
-    backdrop-filter: blur(3px);
-    transition: backdrop-filter 200ms ease-out;
-}
-
-.blur_exit {
-    backdrop-filter: blur(3px);
-}
-
 .blur_exit_active {
     backdrop-filter: blur(0px);
-    transition: backdrop-filter 250ms ease-out;
 }
 
 .main_icon {
@@ -210,12 +188,6 @@
     .menu-enter {
         right: -50vw;
     }
-
-    .menu-enter-active {
-        right: 0;
-        transition: right 200ms ease-out;
-    }
-
 }
 
 @media (max-width: 550px) {
@@ -233,10 +205,5 @@
 
     .menu-enter {
         right: -90vw;
-    }
-
-    .menu-enter-active {
-        right: 0;
-        transition: right 200ms ease-out;
     }
 }
